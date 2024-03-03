@@ -12,7 +12,7 @@ public class MaximumSubArray {
         for (int i=0;i<n;i++){
             numbers[i] = scanner.nextInt();
         }
-        //print all Array elemnts
+        //print all Array elements
         System.out.println("Array Elements  : "+ Arrays.toString(numbers));
         int result = numbers[0];//intlize the value of result of maximum sub array to value of first index of array
         int[] sum =  new int[numbers.length];
@@ -22,9 +22,10 @@ public class MaximumSubArray {
             sum[i] = Math.max(numbers[i], sum[i-1] + numbers[i]);
             result = Math.max(result, sum[i]);
         }
-       // System.out.println("Sum Array Elements  : "+ Arrays.toString(sum));
-        System.out.println("Maximum SubArray is : "+ Arrays.toString(new int[]{result}));
 
+        System.out.println("Maximum SubArray is : "+ result);
+
+        scanner.close();
     }
 
 }
