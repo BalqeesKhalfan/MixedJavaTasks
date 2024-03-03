@@ -24,9 +24,8 @@ public class FindDuplicateNumber {
         if (duplicateNum.size() == numbers.size()) {
             System.out.println("No duplicate numbers found.");
         }
+    scanner.close();
 
-
-      scanner.close();
 
     }
 }
