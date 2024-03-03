@@ -7,20 +7,22 @@ public class FindDuplicateNumber {
         //Ask user to enter length of Array
         System.out.println("Enter Number of Elements on your Integer Array :");
         Integer n =scanner.nextInt();
-        List<Integer> nunbers=new ArrayList<>();
-       // Integer[] nunbers=new Integer[n];// declear the aaray
-        // Enter the array element
+        List<Integer> numbers=new ArrayList<>();
+
         System.out.println("Enter Array Elements :");
         for (int i=0;i<n;i++){
-            nunbers.add(scanner.nextInt());
+            numbers.add(scanner.nextInt());
         }
         //stor the element of array on set to find the duplicat number
-        Set<Integer> duplicatNum=new HashSet<>();
+        Set<Integer> duplicateNum=new HashSet<>();
         System.out.println("Duplicate Number :");
-        for(Integer num : nunbers){
-            if(!duplicatNum.add(num)){
+        for(Integer num : numbers){
+            if(!duplicateNum.add(num)){
                 System.out.print(num+" ");
             }
+        }
+        if (duplicateNum.size() == numbers.size()) {
+            System.out.println("No duplicate numbers found.");
         }
 
 
